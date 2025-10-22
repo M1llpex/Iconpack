@@ -3,29 +3,29 @@ plugins {
 }
 
 android {
-    namespace = "sh.siava.iconpacktemplate"
+    namespace = "Exported Icon Pack"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "sh.siava.iconpacktemplate"
+        applicationId = "ginlemon.iconpackstudio.exported"
         minSdk = 33
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "ginlemon.iconpackstudio.exported.InstructionActivity"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
             }
         debug {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -38,6 +38,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     buildFeatures {
-        compose = false
+        compose = true
     }
 }
